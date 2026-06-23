@@ -33,7 +33,7 @@ class PebloApp extends StatelessWidget {
   }
 }
 
-// Now we have 4 moods: default, reading, happy, sad
+
 enum BuddyMood { defaultMood, reading, happy, sad }
 
 class StoryQuizViewModel extends ChangeNotifier {
@@ -68,11 +68,7 @@ class StoryQuizViewModel extends ChangeNotifier {
     _initTts();
   }
 
-  // Buddy mood getter:
-  // default screen -> defaultMood
-  // while reading -> reading
-  // correct answer -> happy
-  // wrong answer -> sad
+
   BuddyMood get buddyMood {
     if (isPlaying) return BuddyMood.reading;
     if (isCorrect && !lastAnswerWrong) return BuddyMood.happy;
@@ -165,10 +161,6 @@ class StoryQuizViewModel extends ChangeNotifier {
   }
 
   Future<void> onOptionSelected(String option) async {
-    // If congrats is playing and user taps another option, we want:
-    // - wrong -> buzz replaces congrats
-    // - right -> congrats plays again
-    // So we DO NOT early-return here; we let logic run again.
 
     selectedOption = option;
 
