@@ -1,0 +1,41 @@
+name: peblo_story_buddy
+description: little buddy tells stories.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  flutter_tts: 4.2.5
+  provider: ^6.0.0
+  confetti: ^0.7.0
+  audioplayers: ^6.0.0
+  flutter_svg: ^2.0.10
+  lottie: ^3.0.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/audio/congrats.mp3
+    - assets/animation/happy.json
+    - assets/animation/sad.json
+    - assets/animation/listen.json
+    - assets/audio/buzz.mp3
+    - assets/animation/default.json
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/img.png"
+  adaptive_icon_background: "#FFEFD5"
+  adaptive_icon_foreground: "assets/icons/img.png"
